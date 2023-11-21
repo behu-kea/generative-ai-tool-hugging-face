@@ -1,4 +1,4 @@
-const HUGGINGFACE_TOKEN = "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";
+const HUGGINGFACE_TOKEN = "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";
 
 async function getGeneratedText(query) {
     // We can call this function 8 times before we respond
@@ -11,7 +11,10 @@ async function getGeneratedText(query) {
         console.log(generatedText)
         counter++;
     }
-    return generatedText;
+    console.log(generatedText)
+    console.log(query)
+    console.log(generatedText)
+    return generatedText.replace(query, "");
 }
 
 function fetchText(query) {
